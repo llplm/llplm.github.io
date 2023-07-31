@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: pic_llplm.jpg # 200x200px
+  image: pic_llplm.JPG # 200x200px
   image_circular: false # crops the image to make it circular
   address: >
     <p>Plaça d'Eusebi Güell, 1-3, 08034 Barcelona</p>
