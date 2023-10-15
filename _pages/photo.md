@@ -11,13 +11,13 @@ subtitle: Photo portfolio
 <div class="row">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
     <img
-      src="/assets/img/pic_llplm.JPG"
+      src="/assets/img/1.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Boat on Calm Water"
     />
 
     <img
-      src="/assets/img/pic_llplm.JPG"
+      src="/assets/img/2.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Wintry Mountain Landscape"
     />
@@ -25,13 +25,13 @@ subtitle: Photo portfolio
 
   <div class="col-lg-4 mb-4 mb-lg-0">
     <img
-      src="/assets/img/pic_llplm.JPG"
+      src="/assets/img/3.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Mountains in the Clouds"
     />
 
     <img
-      src="/assets/img/pic_llplm.JPG"
+      src="/assets/img/4.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Boat on Calm Water"
     />
@@ -39,13 +39,13 @@ subtitle: Photo portfolio
 
   <div class="col-lg-4 mb-4 mb-lg-0">
     <img
-      src="/assets/img/pic_llplm.JPG"
+      src="/assets/img/5.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Waves at Sea"
     />
 
     <img
-      src="/assets/img/pic_llplm.JPG"
+      src="/assets/img/6.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Yosemite National Park"
     />
