@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: page
 title: photo
 permalink: /
 subtitle: Photo portfolio
