@@ -3,6 +3,7 @@ layout: about
 title: photo
 permalink: /
 subtitle: Photo portfolio
+---
 
 <!-- Gallery -->
 <div class="row">
@@ -50,4 +51,3 @@ subtitle: Photo portfolio
 </div>
 <!-- Gallery -->
 
----
