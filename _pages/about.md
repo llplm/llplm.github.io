@@ -9,7 +9,7 @@ profile:
   image: pic_llplm.JPG # 200x200px
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Plaça d'Eusebi Güell, 1-3, 08034 Barcelona</p>
+    <p></p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
