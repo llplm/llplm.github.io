@@ -19,7 +19,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hola! 
 
-I'm a PhD student at the Earth Sciences Department of the Barcelona Supercomputing Centre, exploring the intersection between climate prediction and ~~AI~~ Machine Learning (ML). My research focuses on applying probabilistic ML to improve the prediction of extremes (e.g., droughts and heatwaves) at the subseasonal to seasonal (S2S) time scale. I'm also curious about statistical and uncertainty modelling, High-Performance Computing (HPC) and user-oriented applications of climate predictions. 
+I'm a PhD student at the Earth Sciences Department of the Barcelona Supercomputing Centre ([BSC](https://www.bsc.es/)), exploring the intersection between climate prediction and ~~AI~~ Machine Learning (ML). My research focuses on applying probabilistic ML to improve the prediction of extremes (e.g., droughts and heatwaves) at the subseasonal to seasonal (S2S) time scale. I'm also curious about statistical and uncertainty modelling, High-Performance Computing (HPC) and user-oriented applications of climate predictions. 
 
 Outside work, you'll probably find me practising outdoor sports, taking photos with my analogue camera or enjoying good food with family & friends. 
 
