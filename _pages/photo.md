@@ -21,9 +21,7 @@ subtitle: Photo portfolio
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Wintry Mountain Landscape"
     />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
+ 
     <img
       src="/assets/img/3.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
@@ -49,8 +47,7 @@ subtitle: Photo portfolio
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Yosemite National Park"
     />
-  </div>
-<div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+
     <img
       src="/assets/img/7.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
@@ -76,9 +73,7 @@ subtitle: Photo portfolio
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Yosemite National Park"
     />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
+ 
     <img
       src="/assets/img/11.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
