@@ -17,13 +17,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Lluís Palma García is a PhD student from the earth sciences department of the Barcelona  Supercomputing Center (BSC). 
+Hola! 
 
-He holds a bachelor's degree in aerospace engineering from the Universitat  Politècnica de Catalunya (UPC) and an MSc in Meteorology from the Universitat de Barcelona (UB). 
+I'm a PhD student at the Earth Sciences Department of the Barcelona Supercomputing Centre, exploring the intersection between climate prediction and ~~AI~~ Machine Learning (ML). My research focuses on applying probabilistic ML to improve the prediction of extremes (e.g., droughts and heatwaves) at the subseasonal to seasonal (S2S) time scale. I'm also curious about statistical and uncertainty modelling, High-Performance Computing (HPC) and user-oriented applications of climate predictions. 
 
-He joined  the BSC in 2018, where he has worked applying statistical and machine learning techniques for the post processing of sub-seasonal to seasonal (S2S) climate predictions. 
+Outside work, you'll probably find me practising outdoor sports, taking photos with my analogue camera or enjoying good food with family & friends. 
 
-Following the same line, he has participated in  several H2020 projects such as S2S4E, VISCA, MED-GOLD, or Vitigeoss, in which he has been mainly in  charge of designing and implementing data pipelines retrieving and post-processing real-time forecasts. 
-
-In  addition, he holds relevant experience working with different prediction systems, applying multiple bias adjustment techniques, and working with traditional and machine learning downscaling methods. 
+Check my [CV](https://llplm.github.io/assets/pdf/CV_llplm.pdf) or contact me through any of the links below for more info.
 
