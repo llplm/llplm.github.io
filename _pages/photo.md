@@ -1,7 +1,7 @@
 ---
 layout: page
 title: photo
-permalink: /
+permalink: /photo/
 nav_order: 5
 subtitle: Photo portfolio
 ---
