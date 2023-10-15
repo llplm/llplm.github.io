@@ -2,6 +2,7 @@
 layout: page
 title: photo
 permalink: /
+nav_order: 5
 subtitle: Photo portfolio
 ---
 
