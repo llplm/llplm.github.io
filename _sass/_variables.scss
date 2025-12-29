@@ -24,7 +24,7 @@ $pink-color-light:    #ffdddd !default;
 $yellow-color:        #efcc00 !default;
 
 // Cyber-retro colors (inspired by lamaquinadeturing.su)
-// Light mode - clean white with green accents
+// Light mode - clean white with purple accents
 $cyber-white:         #ffffff !default;
 $cyber-white-off:     #f8f8f8 !default;
 $cyber-black:         #000000 !default;
@@ -33,6 +33,8 @@ $cyber-gray:          #999999 !default;  // hsl(0, 0%, 60%)
 $cyber-gray-light:    #666666 !default;  // hsl(0, 0%, 40%)
 $cyber-green:         #15d615 !default;  // hsl(120, 95%, 42%) - vibrant lime
 $cyber-green-bright:  #39ff14 !default;  // neon green for dark mode
+$cyber-purple:        #9b59b6 !default;  // vibrant purple for light mode
+$cyber-purple-bright: #b509ac !default;  // brighter purple variant
 
 // Dark mode - terminal black with green
 $terminal-black:      #0a0a0a !default;
