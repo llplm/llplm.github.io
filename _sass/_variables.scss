@@ -23,20 +23,20 @@ $pink-color:          #f92080 !default;
 $pink-color-light:    #ffdddd !default;
 $yellow-color:        #efcc00 !default;
 
-// Terminal/Cyberpunk colors
-$terminal-green:      #00ff00 !default;
-$terminal-green-dim:  #33ff33 !default;
-$terminal-green-bright: #39ff14 !default;
-$terminal-black:      #0d0d0d !default;
-$terminal-dark:       #1a1a1a !default;
+// Cyber-retro colors (inspired by lamaquinadeturing.su)
+// Light mode - clean white with green accents
+$cyber-white:         #ffffff !default;
+$cyber-white-off:     #f8f8f8 !default;
+$cyber-black:         #000000 !default;
+$cyber-gray-dark:     #363636 !default;  // hsl(285, 4%, 21%) approx
+$cyber-gray:          #999999 !default;  // hsl(0, 0%, 60%)
+$cyber-gray-light:    #666666 !default;  // hsl(0, 0%, 40%)
+$cyber-green:         #15d615 !default;  // hsl(120, 95%, 42%) - vibrant lime
+$cyber-green-bright:  #39ff14 !default;  // neon green for dark mode
 
-// Retro beige colors (light mode)
-$retro-beige:         #f5f0e1 !default;
-$retro-beige-dark:    #e8e0c8 !default;
-$retro-brown:         #5c4a32 !default;
-$retro-brown-light:   #8b7355 !default;
-$retro-amber:         #cc7000 !default;
-$retro-olive:         #556b2f !default;
+// Dark mode - terminal black with green
+$terminal-black:      #0a0a0a !default;
+$terminal-dark:       #141414 !default;
 
 $grey-color:          #828282 !default;
 $grey-color-light:    lighten($grey-color, 40%);

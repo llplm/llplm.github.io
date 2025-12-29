@@ -1036,19 +1036,26 @@ nav[data-toggle="toc"] {
 }
 
 // ============================================================================
-// Retro Terminal Aesthetic
+// Cyber-Retro Aesthetic
 // ============================================================================
 
-// VT323 Monospace Font
+// JetBrains Mono Font
 body {
-  font-family: 'VT323', monospace;
-  font-size: 1.2rem;
-  letter-spacing: 0.02em;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'VT323', monospace;
-  letter-spacing: 0.05em;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+// Subtle dotted background pattern (light mode)
+:root {
+  background-image: radial-gradient(circle, #e0e0e0 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 // Text glow effect on links (phosphor effect)
@@ -1057,6 +1064,10 @@ a {
 }
 
 html[data-theme='dark'] {
+  // Dark mode dotted pattern
+  background-image: radial-gradient(circle, rgba(21, 214, 21, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+
   a {
     text-shadow: 0 0 2px var(--global-theme-color);
 
@@ -1092,5 +1103,5 @@ html[data-theme='dark']::after {
     transparent 1px,
     transparent 2px
   );
-  opacity: 0.4;
+  opacity: 0.3;
 }

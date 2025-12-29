@@ -3,33 +3,33 @@
  ******************************************************************************/
 
 :root {
-  // Retro beige theme - early computer science aesthetic
-  --global-bg-color: #{$retro-beige};
-  --global-code-bg-color: #{$retro-beige-dark};
-  --global-text-color: #{$retro-brown};
-  --global-text-color-light: #{$retro-brown-light};
-  --global-theme-color: #{$retro-olive};
-  --global-hover-color: #{$retro-amber};
-  --global-hover-text-color: #{$retro-beige};
-  --global-footer-bg-color: #{$retro-brown};
-  --global-footer-text-color: #{$retro-beige};
-  --global-footer-link-color: #{$retro-beige-dark};
-  --global-distill-app-color: #{$retro-brown-light};
-  --global-divider-color: #{$retro-brown-light};
-  --global-card-bg-color: #{$retro-beige-dark};
+  // Cyber-retro light theme - clean white with green accents
+  --global-bg-color: #{$cyber-white};
+  --global-code-bg-color: #{$cyber-white-off};
+  --global-text-color: #{$cyber-black};
+  --global-text-color-light: #{$cyber-gray-light};
+  --global-theme-color: #{$cyber-green};
+  --global-hover-color: #{$cyber-green};
+  --global-hover-text-color: #{$cyber-white};
+  --global-footer-bg-color: #{$cyber-black};
+  --global-footer-text-color: #{$cyber-white};
+  --global-footer-link-color: #{$cyber-green};
+  --global-distill-app-color: #{$cyber-gray};
+  --global-divider-color: #e0e0e0;
+  --global-card-bg-color: #{$cyber-white-off};
 
-  --global-tip-block: #{$retro-olive};
-  --global-tip-block-bg: rgba(85, 107, 47, 0.1);
-  --global-tip-block-text: #{$retro-brown};
-  --global-tip-block-title: #{$retro-olive};
-  --global-warning-block: #{$retro-amber};
-  --global-warning-block-bg: rgba(204, 112, 0, 0.1);
-  --global-warning-block-text: #{$retro-brown};
-  --global-warning-block-title: #{$retro-amber};
-  --global-danger-block: #a52a2a;
-  --global-danger-block-bg: rgba(165, 42, 42, 0.1);
-  --global-danger-block-text: #a52a2a;
-  --global-danger-block-title: #a52a2a;
+  --global-tip-block: #{$cyber-green};
+  --global-tip-block-bg: rgba(21, 214, 21, 0.1);
+  --global-tip-block-text: #{$cyber-gray-dark};
+  --global-tip-block-title: #{$cyber-green};
+  --global-warning-block: #e7c000;
+  --global-warning-block-bg: rgba(231, 192, 0, 0.1);
+  --global-warning-block-text: #{$cyber-gray-dark};
+  --global-warning-block-title: #e7c000;
+  --global-danger-block: #dc3545;
+  --global-danger-block-bg: rgba(220, 53, 69, 0.1);
+  --global-danger-block-text: #dc3545;
+  --global-danger-block-title: #dc3545;
 
   .fa-sun {
     display : none;
@@ -49,31 +49,31 @@
 }
 
 html[data-theme='dark'] {
-  // Dark mode - slightly deeper terminal look
-  --global-bg-color: #000000;
+  // Cyber-retro dark theme - terminal black with neon green
+  --global-bg-color: #{$terminal-black};
   --global-code-bg-color: #{$terminal-dark};
-  --global-text-color: #{$terminal-green};
-  --global-text-color-light: #{$terminal-green-dim};
-  --global-theme-color: #{$terminal-green-bright};
-  --global-hover-color: #{$terminal-green-bright};
+  --global-text-color: #{$cyber-green};
+  --global-text-color-light: #{$cyber-green};
+  --global-theme-color: #{$cyber-green-bright};
+  --global-hover-color: #{$cyber-green-bright};
   --global-hover-text-color: #{$terminal-black};
   --global-footer-bg-color: #{$terminal-dark};
-  --global-footer-text-color: #{$terminal-green};
-  --global-footer-link-color: #{$terminal-green-bright};
-  --global-distill-app-color: #{$terminal-green};
-  --global-divider-color: rgba(0, 255, 0, 0.3);
+  --global-footer-text-color: #{$cyber-green};
+  --global-footer-link-color: #{$cyber-green-bright};
+  --global-distill-app-color: #{$cyber-green};
+  --global-divider-color: rgba(21, 214, 21, 0.3);
   --global-card-bg-color: #{$terminal-dark};
 
-  --global-tip-block: #{$terminal-green-bright};
-  --global-tip-block-bg: rgba(0, 255, 0, 0.15);
-  --global-tip-block-text: #{$terminal-green};
-  --global-tip-block-title: #{$terminal-green-bright};
+  --global-tip-block: #{$cyber-green-bright};
+  --global-tip-block-bg: rgba(57, 255, 20, 0.1);
+  --global-tip-block-text: #{$cyber-green};
+  --global-tip-block-title: #{$cyber-green-bright};
   --global-warning-block: #e7c000;
-  --global-warning-block-bg: rgba(231, 192, 0, 0.15);
+  --global-warning-block-bg: rgba(231, 192, 0, 0.1);
   --global-warning-block-text: #e7c000;
   --global-warning-block-title: #e7c000;
   --global-danger-block: #ff3333;
-  --global-danger-block-bg: rgba(255, 51, 51, 0.15);
+  --global-danger-block-bg: rgba(255, 51, 51, 0.1);
   --global-danger-block-text: #ff3333;
   --global-danger-block-title: #ff3333;
 
