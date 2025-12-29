@@ -1039,23 +1039,28 @@ nav[data-toggle="toc"] {
 // Cyber-Retro Aesthetic
 // ============================================================================
 
-// JetBrains Mono Font
+// VT323 Retro Terminal Font - applied globally
+html, body, p, h1, h2, h3, h4, h5, h6, a, span, div, li, td, th,
+input, button, textarea, select, label, blockquote, figcaption,
+.nav-link, .navbar-brand, .btn, .card-title, .card-text, .post-title,
+.post-meta, .post-content, .footer, code, pre {
+  font-family: 'VT323', monospace !important;
+}
+
 body {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1rem;
-  letter-spacing: 0.01em;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
 }
 
 // Subtle dotted background pattern (light mode)
 :root {
-  background-image: radial-gradient(circle, #e0e0e0 1px, transparent 1px);
-  background-size: 20px 20px;
+  background-image: radial-gradient(circle, #cccccc 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 // Text glow effect on links (phosphor effect)
