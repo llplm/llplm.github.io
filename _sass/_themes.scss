@@ -3,25 +3,25 @@
  ******************************************************************************/
 
 :root {
-  // Light theme - Swiss Design: warm beige with vibrant purple
+  // Light theme - Swiss Design: warm beige with vibrant blue
   --global-bg-color: #{$swiss-beige};
   --global-code-bg-color: #{$swiss-beige-dark};
   --global-text-color: #{$swiss-black};
   --global-text-color-light: #{$swiss-gray};
-  --global-theme-color: #{$swiss-purple};
-  --global-hover-color: #{$swiss-purple-dark};
+  --global-theme-color: #{$swiss-blue};
+  --global-hover-color: #{$swiss-blue-dark};
   --global-hover-text-color: #{$swiss-white};
   --global-footer-bg-color: #{$swiss-black};
   --global-footer-text-color: #{$swiss-beige};
-  --global-footer-link-color: #{$swiss-purple};
+  --global-footer-link-color: #{$swiss-blue};
   --global-distill-app-color: #{$swiss-gray};
   --global-divider-color: #{$swiss-beige-dark};
   --global-card-bg-color: #{$swiss-white};
 
-  --global-tip-block: #{$swiss-purple};
-  --global-tip-block-bg: #{$swiss-purple-light};
+  --global-tip-block: #{$swiss-blue};
+  --global-tip-block-bg: #{$swiss-blue-light};
   --global-tip-block-text: #{$swiss-black};
-  --global-tip-block-title: #{$swiss-purple};
+  --global-tip-block-title: #{$swiss-blue};
   --global-warning-block: #cc7700;
   --global-warning-block-bg: rgba(204, 119, 0, 0.1);
   --global-warning-block-text: #1a1a1a;

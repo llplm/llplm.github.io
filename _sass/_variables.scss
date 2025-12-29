@@ -24,16 +24,16 @@ $pink-color-light:    #ffdddd !default;
 $yellow-color:        #efcc00 !default;
 
 // Swiss Design color palette
-// Light mode - warm beige with vibrant purple accents
+// Light mode - warm beige with vibrant blue accents
 $swiss-beige:         #EBE9E0 !default;  // warm cream background
 $swiss-beige-dark:    #E0DDD3 !default;  // slightly darker beige
 $swiss-white:         #F5F4EF !default;  // off-white for cards
 $swiss-black:         #1a1a1a !default;  // near-black for text
 $swiss-gray:          #666666 !default;  // medium gray
 $swiss-gray-light:    #999999 !default;  // light gray
-$swiss-purple:        #6200EE !default;  // vibrant electric purple
-$swiss-purple-dark:   #5200CC !default;  // darker purple for hover
-$swiss-purple-light:  rgba(98, 0, 238, 0.1) !default;  // light purple tint
+$swiss-blue:          #0000FF !default;  // pure vibrant blue
+$swiss-blue-dark:     #0000CC !default;  // darker blue for hover
+$swiss-blue-light:    rgba(0, 0, 255, 0.1) !default;  // light blue tint
 
 // Dark mode - terminal black with green (keeping existing)
 $cyber-green:         #15d615 !default;  // hsl(120, 95%, 42%) - vibrant lime
