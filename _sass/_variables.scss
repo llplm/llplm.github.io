@@ -30,6 +30,14 @@ $terminal-green-bright: #39ff14 !default;
 $terminal-black:      #0d0d0d !default;
 $terminal-dark:       #1a1a1a !default;
 
+// Retro beige colors (light mode)
+$retro-beige:         #f5f0e1 !default;
+$retro-beige-dark:    #e8e0c8 !default;
+$retro-brown:         #5c4a32 !default;
+$retro-brown-light:   #8b7355 !default;
+$retro-amber:         #cc7000 !default;
+$retro-olive:         #556b2f !default;
+
 $grey-color:          #828282 !default;
 $grey-color-light:    lighten($grey-color, 40%);
 $grey-color-dark:     #1C1C1D;

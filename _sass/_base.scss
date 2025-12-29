@@ -1034,3 +1034,63 @@ nav[data-toggle="toc"] {
     padding-top: 0.5rem;
   }
 }
+
+// ============================================================================
+// Retro Terminal Aesthetic
+// ============================================================================
+
+// VT323 Monospace Font
+body {
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'VT323', monospace;
+  letter-spacing: 0.05em;
+}
+
+// Text glow effect on links (phosphor effect)
+a {
+  transition: all 0.2s ease-in-out;
+}
+
+html[data-theme='dark'] {
+  a {
+    text-shadow: 0 0 2px var(--global-theme-color);
+
+    &:hover {
+      text-shadow: 0 0 8px var(--global-theme-color),
+                   0 0 15px var(--global-theme-color);
+    }
+  }
+
+  h1, h2, h3 {
+    text-shadow: 0 0 3px var(--global-theme-color);
+  }
+
+  .navbar-brand {
+    text-shadow: 0 0 5px var(--global-theme-color);
+  }
+}
+
+// CRT Scanlines effect (dark mode only)
+html[data-theme='dark']::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  opacity: 0.4;
+}

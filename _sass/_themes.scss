@@ -3,33 +3,33 @@
  ******************************************************************************/
 
 :root {
-  // Terminal/Cyberpunk theme - black background with green accents
-  --global-bg-color: #{$terminal-black};
-  --global-code-bg-color: #{$terminal-dark};
-  --global-text-color: #{$terminal-green-dim};
-  --global-text-color-light: #{$terminal-green};
-  --global-theme-color: #{$terminal-green};
-  --global-hover-color: #{$terminal-green-bright};
-  --global-hover-text-color: #{$terminal-black};
-  --global-footer-bg-color: #{$terminal-dark};
-  --global-footer-text-color: #{$terminal-green-dim};
-  --global-footer-link-color: #{$terminal-green};
-  --global-distill-app-color: #{$terminal-green-dim};
-  --global-divider-color: rgba(0, 255, 0, 0.2);
-  --global-card-bg-color: #{$terminal-dark};
+  // Retro beige theme - early computer science aesthetic
+  --global-bg-color: #{$retro-beige};
+  --global-code-bg-color: #{$retro-beige-dark};
+  --global-text-color: #{$retro-brown};
+  --global-text-color-light: #{$retro-brown-light};
+  --global-theme-color: #{$retro-olive};
+  --global-hover-color: #{$retro-amber};
+  --global-hover-text-color: #{$retro-beige};
+  --global-footer-bg-color: #{$retro-brown};
+  --global-footer-text-color: #{$retro-beige};
+  --global-footer-link-color: #{$retro-beige-dark};
+  --global-distill-app-color: #{$retro-brown-light};
+  --global-divider-color: #{$retro-brown-light};
+  --global-card-bg-color: #{$retro-beige-dark};
 
-  --global-tip-block: #{$terminal-green};
-  --global-tip-block-bg: rgba(0, 255, 0, 0.1);
-  --global-tip-block-text: #{$terminal-green-dim};
-  --global-tip-block-title: #{$terminal-green};
-  --global-warning-block: #e7c000;
-  --global-warning-block-bg: rgba(231, 192, 0, 0.1);
-  --global-warning-block-text: #e7c000;
-  --global-warning-block-title: #e7c000;
-  --global-danger-block: #ff3333;
-  --global-danger-block-bg: rgba(255, 51, 51, 0.1);
-  --global-danger-block-text: #ff3333;
-  --global-danger-block-title: #ff3333;
+  --global-tip-block: #{$retro-olive};
+  --global-tip-block-bg: rgba(85, 107, 47, 0.1);
+  --global-tip-block-text: #{$retro-brown};
+  --global-tip-block-title: #{$retro-olive};
+  --global-warning-block: #{$retro-amber};
+  --global-warning-block-bg: rgba(204, 112, 0, 0.1);
+  --global-warning-block-text: #{$retro-brown};
+  --global-warning-block-title: #{$retro-amber};
+  --global-danger-block: #a52a2a;
+  --global-danger-block-bg: rgba(165, 42, 42, 0.1);
+  --global-danger-block-text: #a52a2a;
+  --global-danger-block-title: #a52a2a;
 
   .fa-sun {
     display : none;
