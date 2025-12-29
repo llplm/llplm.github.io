@@ -18,11 +18,16 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-Hola! 
+Hola!
 
-I'm a PhD student at the Earth Sciences Department of the [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/), exploring the intersection between climate prediction and Machine Learning (ML). My research focuses on applying probabilistic ML to improve the prediction of extremes (e.g., droughts and heatwaves) at the subseasonal to seasonal (S2S) time scale. I'm also curious about statistical and uncertainty modelling, High-Performance Computing (HPC) and user-oriented applications of climate predictions. 
+{% assign start_date = "2018-10-01" | date: "%s" %}
+{% assign current_date = site.time | date: "%s" %}
+{% assign seconds_diff = current_date | minus: start_date %}
+{% assign years_experience = seconds_diff | divided_by: 31536000 %}
 
-Outside work, you'll probably find me practising outdoor sports, taking [photos with my analogue camera](/photo/) or enjoying good food with family & friends. 
+I'm a research engineer at the Earth Sciences Department of the [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/), with {{ years_experience }}+ years of experience working on the intersection between climate prediction and Machine Learning (ML). My research focuses on applying probabilistic ML to improve the prediction of extremes (e.g., droughts and heatwaves) at the subseasonal to seasonal (S2S) time scale. I'm also curious about statistical and uncertainty modelling, High-Performance Computing (HPC) and user-oriented applications of climate predictions.
 
-Check my [CV](/cv/) or contact me through any of the links below for more info.
+Outside work, you'll probably find me practising outdoor sports, taking [photos with my analogue camera](/photo/) or enjoying good food with family & friends.
+
+Check my [CV](/cv/) or contact me through any of the links above for more info.
 
