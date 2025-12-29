@@ -23,6 +23,13 @@ $pink-color:          #f92080 !default;
 $pink-color-light:    #ffdddd !default;
 $yellow-color:        #efcc00 !default;
 
+// Terminal/Cyberpunk colors
+$terminal-green:      #00ff00 !default;
+$terminal-green-dim:  #33ff33 !default;
+$terminal-green-bright: #39ff14 !default;
+$terminal-black:      #0d0d0d !default;
+$terminal-dark:       #1a1a1a !default;
+
 $grey-color:          #828282 !default;
 $grey-color-light:    lighten($grey-color, 40%);
 $grey-color-dark:     #1C1C1D;
@@ -34,5 +41,5 @@ $black-color: #000000 !default;
 
 // Theme colors
 
-$code-bg-color-light:     rgba($purple-color, 0.05);
-$code-bg-color-dark:      #2c3237 !default;
+$code-bg-color-light:     $terminal-dark;
+$code-bg-color-dark:      $terminal-dark;

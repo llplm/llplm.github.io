@@ -75,6 +75,7 @@ github_username: llplm # your GitHub USERNAME (not the full URL)
 gitlab_username: # your GitLab user name
 twitter_username: lluispalma
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
+bluesky_username: lluispalma.bsky.social
 linkedin_username: # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: ZW04e3AAAAAJ
@@ -122,18 +123,18 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-#blog_name: al-folio # blog_name will be displayed in your blog page
-#blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
-#blog_description: a simple whitespace theme for academics
-#permalink: /blog/:year/:title/
-#
-## Pagination
-#pagination:
-#  enabled: true
-#
-#related_blog_posts:
-#  enabled: true
-#  max_related: 5
+blog_name: blog
+blog_nav_title: blog
+blog_description: Thoughts on climate science, ML, and more
+permalink: /blog/:year/:title/
+
+# Pagination
+pagination:
+  enabled: true
+
+related_blog_posts:
+  enabled: true
+  max_related: 5
 #
 ## Giscus comments (RECOMMENDED)
 ## Follow instructions on https://giscus.app/ to setup for your repo to fill out
