@@ -3,7 +3,7 @@
  ******************************************************************************/
 
 body {
-  padding-bottom: 70px;
+  padding-bottom: 0;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 
@@ -18,8 +18,8 @@ body.fixed-top-nav {
 }
 
 body.sticky-bottom-footer {
-  // Remove padding below footer.
-  padding-bottom: 0;
+  // Add padding for sticky footer.
+  padding-bottom: 70px;
 }
 
 .container {
