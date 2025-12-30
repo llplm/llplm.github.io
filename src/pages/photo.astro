@@ -38,7 +38,7 @@ if (existsSync(photosDir)) {
             <img
               src={`/photos/${photo}`}
               alt={photo}
-              class="photo-image pixelated"
+              class="photo-image"
               loading="lazy"
             />
           </div>
@@ -61,7 +61,7 @@ if (existsSync(photosDir)) {
         <button class="lightbox-close retro-button" aria-label="Close">&times;</button>
         <button class="lightbox-prev retro-button" aria-label="Previous">&larr;</button>
         <button class="lightbox-next retro-button" aria-label="Next">&rarr;</button>
-        <img id="lightbox-image" src="" alt="" class="lightbox-image pixelated" />
+        <img id="lightbox-image" src="" alt="" class="lightbox-image" />
       </div>
     </div>
   </div>
