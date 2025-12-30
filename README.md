@@ -1,4 +1,4 @@
-# Lluís Palma - Retro Cyber Climate Portfolio
+# Portfolio website code
 
 Built with Astro. Features a retro cybernetic aesthetic with climate data visualizations.
 
