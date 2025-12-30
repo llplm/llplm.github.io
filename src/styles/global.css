@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Swiss Design - Light mode (beige + blue) */
+  --bg-primary: #EBE9E0;
+  --bg-secondary: #E0DDD3;
+  --bg-card: #F5F4EF;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --accent-blue: #0000FF;
+  --accent-blue-dark: #0000CC;
+  --accent-blue-light: rgba(0, 0, 255, 0.1);
+
+  /* Retro cyber effects */
+  --scanline-opacity: 0.03;
+  --crt-glow: 2px;
+  --pixel-size: 2px;
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --max-width: 800px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+}
+
+[data-theme='dark'] {
+  /* Terminal green - Dark mode */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --bg-card: #1a1a1a;
+  --text-primary: #15d615;
+  --text-secondary: #15d615;
+  --accent-blue: #39ff14;
+  --accent-blue-dark: #2fe00f;
+  --accent-blue-light: rgba(57, 255, 20, 0.1);
+  --scanline-opacity: 0.06;
+}
+
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-mono);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* CRT scanline effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 3px
+  );
+  opacity: var(--scanline-opacity);
+  z-index: 9999;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: var(--spacing-md);
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-blue-dark);
+  text-decoration: underline;
+}
+
+/* Layout */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-lg) 0;
+}
+
+/* Retro elements */
+.retro-border {
+  border: 2px solid var(--text-primary);
+  padding: var(--spacing-sm);
+  background: var(--bg-card);
+}
+
+.retro-button {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 2px solid var(--accent-blue);
+  background: transparent;
+  color: var(--accent-blue);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retro-button:hover {
+  background: var(--accent-blue);
+  color: var(--bg-primary);
+  text-decoration: none;
+}
+
+/* Glitch text effect */
+@keyframes glitch {
+  0%, 100% {
+    text-shadow: 2px 2px var(--accent-blue), -2px -2px var(--accent-blue-dark);
+  }
+  25% {
+    text-shadow: -2px 2px var(--accent-blue), 2px -2px var(--accent-blue-dark);
+  }
+  50% {
+    text-shadow: 2px -2px var(--accent-blue), -2px 2px var(--accent-blue-dark);
+  }
+  75% {
+    text-shadow: -2px -2px var(--accent-blue), 2px 2px var(--accent-blue-dark);
+  }
+}
+
+.glitch-text {
+  animation: glitch 3s infinite;
+  animation-timing-function: steps(2);
+}
+
+/* Pixelated effect */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Blink effect (retro terminal) */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+/* Card styling */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--text-secondary);
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0 var(--accent-blue-light);
+}
+
+/* Climate data visualization placeholder */
+.climate-viz {
+  background: var(--bg-secondary);
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.climate-viz::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 2px,
+    var(--accent-blue-light) 2px,
+    var(--accent-blue-light) 4px
+  );
+  opacity: 0.3;
+  pointer-events: none;
+}

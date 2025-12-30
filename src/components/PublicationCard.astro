@@ -1,0 +1,138 @@
+---
+import type { Publication } from '../utils/bibParser';
+import { formatAuthors } from '../utils/bibParser';
+
+interface Props {
+  pub: Publication;
+}
+
+const { pub } = Astro.props;
+const venue = pub.journal || pub.booktitle || 'Preprint';
+const authors = formatAuthors(pub.author, 3);
+---
+
+<div class={`publication-card card ${pub.selected ? 'featured' : ''}`}>
+  <div class="pub-header">
+    <span class="pub-year">[{pub.year}]</span>
+    {pub.selected && <span class="featured-badge">★ Featured</span>}
+    {pub.citations && pub.citations > 0 && (
+      <span class="citations-badge" title="Citations">
+        📊 {pub.citations}
+      </span>
+    )}
+  </div>
+
+  <h3 class="pub-title">{pub.title}</h3>
+
+  <p class="pub-authors">{authors}</p>
+
+  <p class="pub-venue"><em>{venue}</em></p>
+
+  {pub.abstract && (
+    <details class="pub-abstract">
+      <summary>Abstract</summary>
+      <p>{pub.abstract}</p>
+    </details>
+  )}
+
+  <div class="pub-links">
+    {pub.url && (
+      <a href={pub.url} target="_blank" class="pub-link retro-button">
+        Paper
+      </a>
+    )}
+    {pub.doi && (
+      <a href={`https://doi.org/${pub.doi}`} target="_blank" class="pub-link retro-button">
+        DOI
+      </a>
+    )}
+    {pub.arxiv && (
+      <a href={`https://arxiv.org/abs/${pub.arxiv}`} target="_blank" class="pub-link retro-button">
+        arXiv
+      </a>
+    )}
+  </div>
+</div>
+
+<style>
+  .publication-card {
+    position: relative;
+  }
+
+  .publication-card.featured {
+    border-left: 4px solid var(--accent-blue);
+    background: var(--accent-blue-light);
+  }
+
+  .pub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-year {
+    font-weight: 700;
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+  }
+
+  .featured-badge {
+    font-size: 0.75rem;
+    color: var(--accent-blue);
+    font-weight: 700;
+  }
+
+  .pub-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .pub-authors {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+  }
+
+  .pub-venue {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .pub-abstract {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-left: 2px solid var(--accent-blue);
+  }
+
+  .pub-abstract summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--accent-blue);
+    user-select: none;
+  }
+
+  .pub-abstract summary:hover {
+    text-decoration: underline;
+  }
+
+  .pub-abstract p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .pub-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .pub-link {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+</style>

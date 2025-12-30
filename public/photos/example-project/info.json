@@ -1,0 +1,10 @@
+{
+  "title": "Example Project",
+  "description": "Replace this with your photo project",
+  "cover": "cover.jpg",
+  "date": "2025",
+  "photos": [
+    "photo1.jpg",
+    "photo2.jpg"
+  ]
+}

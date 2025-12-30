@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Calculate years of experience from start date
+const startDate = new Date('2018-10-01');
+const now = new Date();
+const yearsExperience = Math.floor((now.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25));
+---
+
+<BaseLayout title="About">
+  <div class="about-page">
+    <div class="profile-section">
+      <div class="profile-image-container">
+        <img
+          src="/assets/pic_llplm.JPG"
+          alt="Lluís Palma"
+          class="profile-image pixelated"
+          width="300"
+          height="300"
+        />
+      </div>
+
+      <div class="bio-content">
+        <h1>Hola!</h1>
+
+        <p>
+          I'm a research engineer at the Earth Sciences Department of the
+          <a href="https://www.bsc.es/" target="_blank">Barcelona Supercomputing Center (BSC)</a>,
+          with {yearsExperience}+ years of experience working on the intersection between
+          climate prediction and Machine Learning (ML).
+        </p>
+
+        <p>
+          My research focuses on applying probabilistic ML to improve the prediction of extremes
+          (e.g., droughts and heatwaves) at the subseasonal to seasonal (S2S) time scale.
+          I'm also curious about statistical and uncertainty modelling, High-Performance Computing (HPC)
+          and user-oriented applications of climate predictions.
+        </p>
+
+        <p>
+          Outside work, you'll probably find me practising outdoor sports, taking
+          <a href="/photo">photos with my analogue camera</a> or enjoying good food
+          with family & friends.
+        </p>
+
+        <p>
+          Check my <a href="/cv">CV</a> or contact me through any of the links above for more info.
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-page {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .profile-section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .profile-image-container {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: auto;
+    border: 3px solid var(--text-primary);
+    box-shadow: 8px 8px 0 var(--accent-blue-light);
+  }
+
+  .bio-content h1 {
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+  }
+
+  .bio-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 768px) {
+    .profile-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .profile-image-container {
+      position: relative;
+      top: 0;
+    }
+
+    .profile-image {
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+</style>

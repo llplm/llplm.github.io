@@ -1,0 +1,121 @@
+---
+const navItems = [
+  { href: '/', label: 'about' },
+  { href: '/publications', label: 'publications' },
+  { href: '/blog', label: 'blog' },
+  { href: '/cv', label: 'cv' },
+  { href: '/photo', label: 'photo' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-brand">
+        <a href="/">
+          <span class="bracket">&lt;</span>lluís<span class="slash">/</span>palma<span class="bracket">&gt;</span>
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        {navItems.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class={currentPath === href ? 'active' : ''}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <button
+        onclick="toggleTheme()"
+        class="theme-toggle retro-button"
+        aria-label="Toggle theme"
+      >
+        <span class="theme-icon">◐</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--text-primary);
+    background: var(--bg-primary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-brand a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+
+  .bracket {
+    color: var(--accent-blue);
+    opacity: 0.8;
+  }
+
+  .slash {
+    color: var(--accent-blue);
+    opacity: 0.6;
+    margin: 0 0.1em;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    border-bottom-color: var(--accent-blue);
+  }
+
+  .theme-toggle {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .theme-icon {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>

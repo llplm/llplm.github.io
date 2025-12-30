@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Blog">
+  <div class="blog-page">
+    <h1>Blog</h1>
+
+    <div class="construction retro-border">
+      <div class="construction-content">
+        <pre class="construction-art">
+    🚧  UNDER CONSTRUCTION  🚧
+        </pre>
+        <p class="construction-message">
+          The blog is currently under construction. Check back soon for thoughts on
+          climate science, machine learning, and more.
+        </p>
+
+        <div class="construction-back">
+          <a href="/" class="retro-button">
+            ← Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+
+  .construction {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--bg-secondary);
+  }
+
+  .construction-art {
+    font-size: 0.85rem;
+    color: var(--accent-blue);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  .construction-message {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 2rem 0;
+  }
+
+  .construction-back {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .construction-art {
+      font-size: 0.65rem;
+    }
+
+    .construction {
+      padding: 2rem 1rem;
+    }
+  }
+</style>

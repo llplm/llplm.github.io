@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PublicationCard from '../components/PublicationCard.astro';
+import { parseBibFile } from '../utils/bibParser';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
+// Read and parse the .bib file
+const bibPath = join(process.cwd(), 'public', 'data', 'papers.bib');
+let publications = [];
+
+try {
+  const bibContent = readFileSync(bibPath, 'utf-8');
+  publications = parseBibFile(bibContent);
+} catch (error) {
+  console.error('Error reading publications:', error);
+}
+
+const featured = publications.filter(p => p.selected);
+const byYear = publications.reduce((acc, pub) => {
+  if (!acc[pub.year]) {
+    acc[pub.year] = [];
+  }
+  acc[pub.year].push(pub);
+  return acc;
+}, {} as Record<string, typeof publications>);
+
+const years = Object.keys(byYear).sort((a, b) => parseInt(b) - parseInt(a));
+---
+
+<BaseLayout title="Publications">
+  <div class="publications-page">
+    <h1>Publications</h1>
+
+    {featured.length > 0 && (
+      <section class="featured-section">
+        <h2>
+          <span class="section-marker">//</span> Featured Work
+        </h2>
+        <div class="publications-list">
+          {featured.map(pub => <PublicationCard pub={pub} />)}
+        </div>
+      </section>
+    )}
+
+    <section class="all-publications">
+      <h2>
+        <span class="section-marker">//</span> All Publications
+      </h2>
+
+      {years.map(year => (
+        <div class="year-group">
+          <h3 class="year-heading">{year}</h3>
+          <div class="publications-list">
+            {byYear[year].map(pub => <PublicationCard pub={pub} />)}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    {publications.length === 0 && (
+      <div class="retro-border" style="padding: 2rem; text-align: center;">
+        <p>No publications found. Add papers.bib to /public/data/</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .publications-page {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+  }
+
+  .section-marker {
+    color: var(--accent-blue);
+    font-weight: 700;
+  }
+
+  .featured-section {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px dashed var(--text-secondary);
+  }
+
+  .year-group {
+    margin-bottom: 3rem;
+  }
+
+  .year-heading {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-blue);
+  }
+
+  .publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+</style>

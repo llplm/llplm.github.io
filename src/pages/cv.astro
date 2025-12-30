@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { existsSync } from 'fs';
+import { join } from 'path';
+
+// Check if CV PDF exists
+const cvPath = join(process.cwd(), 'public', 'data', 'cv.pdf');
+const cvExists = existsSync(cvPath);
+---
+
+<BaseLayout title="CV">
+  <div class="cv-page">
+    <h1>Curriculum Vitae</h1>
+
+    {cvExists ? (
+      <>
+        <div class="cv-actions">
+          <a href="/data/cv.pdf" download class="retro-button">
+            <span class="blink">↓</span> Download PDF
+          </a>
+        </div>
+
+        <!-- Embedded PDF viewer -->
+        <div class="cv-embed retro-border">
+          <iframe
+            src="/data/cv.pdf"
+            type="application/pdf"
+            width="100%"
+            height="800"
+            title="CV PDF Viewer"
+          >
+            <p>
+              Your browser doesn't support PDF embedding.
+              <a href="/data/cv.pdf" download>Download the PDF</a> instead.
+            </p>
+          </iframe>
+        </div>
+
+        <!-- Fallback message -->
+        <div class="cv-fallback">
+          <p>
+            <em>
+              If the PDF doesn't display above, you can
+              <a href="/data/cv.pdf" download>download it here</a>.
+            </em>
+          </p>
+        </div>
+      </>
+    ) : (
+      <div class="retro-border cv-missing">
+        <p class="blink" style="font-size: 2rem; margin-bottom: 1rem;">📄</p>
+        <h2>CV Not Found</h2>
+        <p style="margin-top: 1rem;">
+          Add your CV to <code>public/data/cv.pdf</code> to display it here.
+        </p>
+      </div>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .cv-page {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cv-intro {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+  }
+
+  .cv-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cv-embed {
+    margin: 2rem 0;
+    background: var(--bg-card);
+    padding: 0;
+  }
+
+  .cv-embed iframe {
+    display: block;
+    border: none;
+    min-height: 800px;
+  }
+
+  .cv-fallback {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .cv-missing {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+  }
+
+  .cv-missing h2 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .cv-missing code {
+    background: var(--bg-secondary);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9em;
+    color: var(--accent-blue);
+  }
+
+  @media (max-width: 768px) {
+    .cv-actions {
+      flex-direction: column;
+    }
+
+    .cv-embed iframe {
+      min-height: 600px;
+    }
+  }
+</style>
