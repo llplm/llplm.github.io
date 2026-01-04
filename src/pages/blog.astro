@@ -30,7 +30,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .blog-page {
     max-width: 700px;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 3rem 1rem;
   }
 
   .construction {
@@ -64,6 +64,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .construction {
       padding: 2rem 1rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .blog-page {
+      padding: 2rem 0;
+    }
+
+    .construction {
+      padding: 2rem 1.25rem;
+    }
+
+    .construction-message {
+      font-size: 1rem;
+      margin: 1.5rem 0;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .blog-page {
+      padding: 1.5rem 0;
+    }
+
+    .construction-art {
+      font-size: 0.6rem;
     }
   }
 </style>

@@ -70,6 +70,7 @@ const years = Object.keys(byYear).sort((a, b) => parseInt(b) - parseInt(a));
   .publications-page {
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 
   .intro {
@@ -105,5 +106,24 @@ const years = Object.keys(byYear).sort((a, b) => parseInt(b) - parseInt(a));
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .featured-section {
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .year-group {
+      margin-bottom: 2rem;
+    }
+
+    .year-heading {
+      font-size: 1.3rem;
+    }
+
+    .publications-list {
+      gap: 1.25rem;
+    }
   }
 </style>

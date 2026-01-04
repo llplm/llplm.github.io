@@ -55,6 +55,7 @@ const yearsExperience = Math.floor((now.getTime() - startDate.getTime()) / (1000
   .about-page {
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 
   .profile-section {
@@ -66,7 +67,7 @@ const yearsExperience = Math.floor((now.getTime() - startDate.getTime()) / (1000
 
   .profile-image-container {
     position: sticky;
-    top: 100px;
+    top: 80px;
     height: fit-content;
   }
 
@@ -90,7 +91,7 @@ const yearsExperience = Math.floor((now.getTime() - startDate.getTime()) / (1000
   @media (max-width: 768px) {
     .profile-section {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .profile-image-container {
@@ -99,9 +100,28 @@ const yearsExperience = Math.floor((now.getTime() - startDate.getTime()) / (1000
     }
 
     .profile-image {
-      max-width: 300px;
+      max-width: 250px;
       margin: 0 auto;
       display: block;
+    }
+
+    .bio-content p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .profile-section {
+      gap: 1rem;
+    }
+
+    .profile-image {
+      max-width: 200px;
+    }
+
+    .bio-content p {
+      font-size: 0.95rem;
     }
   }
 </style>

@@ -27,6 +27,21 @@
   --spacing-lg: 4rem;
 }
 
+/* Responsive spacing overrides */
+@media (max-width: 768px) {
+  :root {
+    --spacing-md: 1.25rem;
+    --spacing-lg: 2.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+  }
+}
+
 [data-theme='dark'] {
   /* Terminal green - Dark mode */
   --bg-primary: #0a0a0a;
@@ -87,21 +102,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 4vw + 1rem, 2.5rem);
   letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 3vw + 0.8rem, 1.8rem);
   margin-top: var(--spacing-md);
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 2.5vw + 0.7rem, 1.4rem);
 }
 
 p {
   margin-bottom: var(--spacing-sm);
+  font-size: clamp(0.9rem, 1.5vw + 0.7rem, 1rem);
 }
 
 a {
@@ -122,8 +138,32 @@ a:hover {
   padding: 0 var(--spacing-md);
 }
 
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 .section {
   padding: var(--spacing-lg) 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-md) 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .section {
+    padding: 1.5rem 0;
+  }
 }
 
 /* Retro elements */

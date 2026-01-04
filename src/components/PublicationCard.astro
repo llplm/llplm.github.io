@@ -135,4 +135,38 @@ const authors = formatAuthors(pub.author, 3);
     font-size: 0.8rem;
     padding: 0.3rem 0.6rem;
   }
+
+  @media (max-width: 640px) {
+    .pub-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+
+    .pub-title {
+      font-size: 1rem;
+    }
+
+    .pub-authors,
+    .pub-venue {
+      font-size: 0.85rem;
+    }
+
+    .pub-abstract {
+      padding: 0.75rem;
+    }
+
+    .pub-abstract p {
+      font-size: 0.85rem;
+    }
+
+    .pub-links {
+      gap: 0.4rem;
+    }
+
+    .pub-link {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+    }
+  }
 </style>

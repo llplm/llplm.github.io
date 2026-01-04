@@ -3,7 +3,7 @@
 ---
 
 <div class="pixel-earth-container">
-  <canvas id="earth-canvas" width="200" height="200"></canvas>
+  <canvas id="earth-canvas"></canvas>
   <div class="earth-info">
     <div class="climate-stat">
       <span class="stat-label">CO₂:</span>
@@ -33,12 +33,18 @@
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
     border: 1px solid var(--text-secondary);
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 1;
   }
 
   .earth-info {
     display: flex;
     gap: 2rem;
     font-size: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .climate-stat {
@@ -54,6 +60,37 @@
     color: var(--accent-blue);
     font-weight: 700;
   }
+
+  @media (max-width: 640px) {
+    .pixel-earth-container {
+      padding: 1.5rem;
+      gap: 0.75rem;
+    }
+
+    #earth-canvas {
+      max-width: 160px;
+    }
+
+    .earth-info {
+      gap: 1.5rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .pixel-earth-container {
+      padding: 1rem;
+    }
+
+    #earth-canvas {
+      max-width: 140px;
+    }
+
+    .earth-info {
+      gap: 1rem;
+      font-size: 0.8rem;
+    }
+  }
 </style>
 
 <script>
@@ -62,8 +99,30 @@
 
   if (!ctx) throw new Error('Could not get canvas context');
 
-  const width = canvas.width;
-  const height = canvas.height;
+  // Make canvas responsive
+  function resizeCanvas() {
+    const container = canvas.parentElement;
+    if (!container) return;
+
+    const size = Math.min(
+      container.clientWidth - 40,  // Account for padding
+      200  // Max size
+    );
+
+    canvas.width = size;
+    canvas.height = size;
+  }
+
+  // Initial size
+  resizeCanvas();
+
+  // Resize on window resize (debounced)
+  let resizeTimeout: number;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = window.setTimeout(resizeCanvas, 150);
+  });
+
   const pixelSize = 4;
 
   // Simple color palette for pixelated earth
@@ -77,13 +136,16 @@
   let rotation = 0;
 
   function drawPixelatedEarth() {
+    const width = canvas.width;
+    const height = canvas.height;
+
     // Clear canvas
     ctx.fillStyle = '#000000';
     ctx.fillRect(0, 0, width, height);
 
     const centerX = width / 2;
     const centerY = height / 2;
-    const radius = 80;
+    const radius = Math.min(width, height) * 0.4;  // Scale radius with canvas
 
     // Draw pixelated circle (earth)
     for (let y = 0; y < height; y += pixelSize) {

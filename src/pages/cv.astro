@@ -62,6 +62,7 @@ const cvExists = existsSync(cvPath);
   .cv-page {
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 
   .cv-intro {
@@ -85,7 +86,7 @@ const cvExists = existsSync(cvPath);
   .cv-embed iframe {
     display: block;
     border: none;
-    min-height: 800px;
+    min-height: clamp(500px, 80vh, 800px);
   }
 
   .cv-fallback {
@@ -119,7 +120,20 @@ const cvExists = existsSync(cvPath);
     }
 
     .cv-embed iframe {
-      min-height: 600px;
+      min-height: clamp(400px, 70vh, 600px);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .cv-embed iframe {
+      min-height: clamp(350px, 60vh, 500px);
+    }
+  }
+
+  /* High aspect ratio phones - prioritize content over PDF height */
+  @media (max-aspect-ratio: 9/16) and (max-width: 768px) {
+    .cv-embed iframe {
+      min-height: 50vh;
     }
   }
 </style>
